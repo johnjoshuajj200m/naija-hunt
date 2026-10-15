@@ -85,7 +85,7 @@ F. Suggest a commit message; ask before pushing.
 Start with Milestone 0 ONLY. Do not build the entire game. First show the planned directory tree, dependency list, npm scripts, and CI workflow. Then implement the foundation, execute verification commands, and summarize results. If you cannot execute a command, state that clearly; do not claim it passed.
 
 ## Visual Direction Amendment (2026-10-15)
-Proposed, pending owner approval. Once approved, where this section conflicts with earlier text, this section wins. All other rules above, including every non-negotiable engineering rule, still apply.
+Approved by the project owner (2026-10-15). Once approved, where this section conflicts with earlier text, this section wins. All other rules above, including every non-negotiable engineering rule, still apply.
 
 ### Why
 The procedural-geometry Palm Mile preview (plain boxes, canvas-drawn colour textures, one sun, no imported models, no character) does not reach the intended quality. Adding more primitive geometry will not close that gap.
