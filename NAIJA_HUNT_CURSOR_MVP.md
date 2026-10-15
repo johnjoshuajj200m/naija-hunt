@@ -42,7 +42,7 @@ NH-01 Welcome; NH-03 Avatar Selection (preset characters); NH-04 City; NH-05 Loc
 - Acceptance: mobile viewport usable without horizontal scrolling; navigation and drawer tests pass.
 
 ## Milestone 2: first playable 3D district
-- Use procedural geometry (no Blender requirement yet) for ground, roads, 3 buildings, trees, daylight, and 2 selectable locations.
+- Use procedural geometry (no Blender requirement yet) for ground, roads, 3 buildings, trees, daylight, and 2 selectable locations. (Environment art approach superseded by the Visual Direction Amendment at the end of this document.)
 - Add third-person placeholder avatar, joystick/touch input, desktop WASD, camera follow, basic collision, scene entry/exit.
 - Performance target: aim for smooth operation on a midrange phone; measure FPS and memory rather than guaranteeing 60 FPS.
 - Acceptance: player moves and can reach/interact with one location on desktop and mobile touch simulator.
@@ -83,3 +83,33 @@ F. Suggest a commit message; ask before pushing.
 
 ## First instruction to Cursor
 Start with Milestone 0 ONLY. Do not build the entire game. First show the planned directory tree, dependency list, npm scripts, and CI workflow. Then implement the foundation, execute verification commands, and summarize results. If you cannot execute a command, state that clearly; do not claim it passed.
+
+## Visual Direction Amendment (2026-10-15)
+Proposed, pending owner approval. Once approved, where this section conflicts with earlier text, this section wins. All other rules above, including every non-negotiable engineering rule, still apply.
+
+### Why
+The procedural-geometry Palm Mile preview (plain boxes, canvas-drawn colour textures, one sun, no imported models, no character) does not reach the intended quality. Adding more primitive geometry will not close that gap.
+
+### Target
+A premium, cinematic, realistic-stylized 3D adventure set in a futuristic Nigerian environment. This is NOT photorealism and must never be described as such. Naija Hunt has its own identity: do not copy another game's characters, interface, world or assets. The Nigerian setting stays recognizable through architecture, roads, markets, vegetation, transport (danfo, keke and similar), signage and other local detail. Futuristic infrastructure must be believable and restrained; the earlier "no neon sci-fi aesthetic" rule remains.
+
+### Rendering and asset pipeline
+- Keep Three.js and @react-three/fiber. Do not switch engines.
+- Move from procedural primitives to authored or licensed glTF/GLB environment assets with PBR materials, baked or carefully optimized lighting, image-based lighting, a curated cinematic camera and lightweight atmospheric effects.
+- The Milestone 1 plan will propose any new runtime dependency (for example @react-three/drei) for approval before it is installed.
+- Optimize assets with compression (Draco or Meshopt for geometry, KTX2 for textures), trim sheets or atlases, level of detail, and quality tiers. Concrete performance and download budgets are set from measured numbers in Milestone 1, then enforced.
+- Frame rate, memory and draw calls are measured, never guessed or promised.
+
+### Asset sourcing and licences
+- Sourcing order: (1) open or licensed kits whose exact licence has been checked; (2) commissioned or modified assets for what is missing, especially the Nigerian protagonist and Lagos-specific props.
+- The exact licence of every external asset is read on its source page and recorded (source URL, licence, attribution requirement, date checked) in docs/ASSET_LICENSES.md BEFORE the asset is downloaded or integrated. Do not assume a licence from memory. Unclear or restrictive terms mean the asset is not used.
+- No asset is downloaded and no character is integrated without the owner's explicit approval of that specific asset.
+- Never present a placeholder as a finished asset. The character stays clearly labelled "not implemented" in the UI until an approved protagonist is integrated.
+
+### Revised milestone order for the visual track
+- Milestone 0 is completed first (Playwright smoke test, CI workflow, README, ARCHITECTURE.md, DECISIONS.md, ROADMAP.md, .env.example).
+- Visual M1: look-development gate with a few hero assets, then one curated hero junction with baked lighting, image-based lighting, atmosphere and a cinematic camera. Owner reviews against the reference images before the scene is scaled up.
+- Visual M2: approved Nigerian protagonist with appropriate clothing and idle, walk and run animations.
+- Visual M3: polished game menu composed around the real environment and character.
+- Visual M4: performance optimization and verified mobile and desktop rendering.
+- Later: movement, exploration and treasure discovery, then the persistence work already listed above.
