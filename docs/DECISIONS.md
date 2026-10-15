@@ -41,26 +41,15 @@ The scene is loaded after the menu so the first screen appears sooner. Vite warn
 - The 3D test accepts either a canvas or the fallback text, and records which. It does not claim the scene rendered correctly.
 - Traces are kept only for failures.
 
-### D10. Tailwind scans the whole project, so one file is excluded
-Tailwind turned the word "fixed" in a comment in `playwright.config.ts` into an unused `.fixed` utility. `src/index.css` excludes that file with `@source not "../playwright.config.ts";`. This restored the original CSS output byte for byte.
+### D10. Tailwind source detection is explicit
+`src/index.css` imports Tailwind with `@import "tailwindcss" source(none);`, which turns off automatic whole-project scanning. It then names the only two places Tailwind reads for class names: `@source "../index.html";` and `@source "./";` (all of `src/`, including its test files). Paths are relative to `src/index.css`. Class names used anywhere else need their own `@source` line.
+
+History: the first fix excluded a single file, `playwright.config.ts`, with `@source not`, after the word "fixed" in one of its comments produced an unused `.fixed` rule. That did not scale, because every new file could cause the same problem, so it was replaced by the explicit configuration above and the exclusion line was removed. See O1 under "Resolved".
 
 ### D11. CI design
 `.github/workflows/ci.yml` runs on pull requests to `main` and pushes to `main`. It is pinned to `ubuntu-24.04` with a 20-minute timeout. It uses `contents: read` only, with no secrets, deployment, publishing or automatic commits. Playwright report and traces are uploaded for 14 days only if the smoke tests fail. In-progress runs are cancelled only for pull requests. Actions are referenced by major version tags (`@v7`), not by commit SHA, which is a possible later hardening.
 
 ## Open
-
-### O1. Tailwind's whole-project scan keeps generating unused CSS
-Tailwind reads every non-ignored file for class names, including Markdown and the workflow. Ordinary words then become utilities. Measured on 2026-10-15:
-- Original build: 14,770 B.
-- With `ci.yml`: 14,797 B. The extra 27 B is `.contents{display:contents}`, from `permissions:` then `contents: read`.
-- With `ci.yml` and these docs: 15,067 B, which is 297 B over the original. Words in the docs and config such as `fixed`, `contents` and `shadow` produce rules (`.fixed`, `.contents`, `.shadow`) that no app source uses. Other generated rules may also be affected, but this was not traced rule by rule.
-
-These rules match no element, so the app looks and behaves the same. The cost is a slightly larger CSS file, and it will recur with every new document. Options for the owner:
-1. Leave it.
-2. Add one `@source not` line per excluded path in `src/index.css`. This is whack-a-mole as files are added.
-3. Make scanning explicit, by importing Tailwind with `source(none)` and listing only `index.html` and `src/` with `@source`. This looks like the durable fix, but it has not been tried in this repository.
-
-Either change touches `src/index.css`, so it waits for the owner's decision.
 
 ### O2. CI is unverified on GitHub
 The workflow has not run on GitHub, and its YAML has not been checked by an independent validator because none is installed. Still unconfirmed: `npm ci` on Ubuntu, the action tags resolving, and Playwright's bundled Chromium installing and passing.
@@ -70,3 +59,15 @@ All work is on the local `feature/milestone-0` branch. The remote is `origin` on
 
 ### O4. Reference images
 The owner's visual reference images are not in the repository, and the folder `docs/reference/` does not exist. Visual acceptance depends on them.
+
+## Resolved
+
+### O1. Tailwind generated unused CSS from documentation and workflow text (resolved 2026-10-15)
+Tailwind used to read every file that was not git-ignored, including Markdown and the workflow, and turned ordinary words into utilities. Measured builds:
+- Original build: 14,770 B.
+- With `ci.yml`: 14,797 B. The extra 27 B was `.contents{display:contents}`, from `permissions:` then `contents: read`.
+- With `ci.yml` and the docs: 15,067 B, which was 297 B over the original. The unused rules were `.contents`, `.fixed` and `.shadow`.
+
+Resolution, approved by the owner: the explicit configuration in D10. After it, the build is `index-BIdJc1ix.css`, 14,770 B (SHA-256 beginning `4279F565CBDE9333`), the same size and content-hash filename as the original build. Compared with the 15,067 B build, exactly those three rules were removed and none were added. All 100 classes that the app source uses and that had a rule are still present. The app's behaviour is unchanged.
+
+Consequence to remember: documentation and CI text no longer affect the built CSS, and a class name used outside `index.html` or `src/` will not be generated until an `@source` line for it is added.

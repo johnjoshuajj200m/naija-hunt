@@ -60,4 +60,4 @@ From the brief: no real-money rewards, deposits, crypto or withdrawals. Crews, C
 
 ## Open decisions
 
-See "Open" in [`DECISIONS.md`](DECISIONS.md): how to stop Tailwind generating unused CSS from documentation and workflow files, first-run CI verification, pushing, and the missing reference images.
+See "Open" in [`DECISIONS.md`](DECISIONS.md): first-run CI verification, pushing, and the missing reference images. The Tailwind source-scanning question is resolved (O1 under "Resolved" there).

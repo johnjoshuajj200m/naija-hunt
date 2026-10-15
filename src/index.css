@@ -1,10 +1,12 @@
-@import "tailwindcss";
-
 /*
-  Tailwind scans the whole project for class names. The word "fixed" in a comment inside
-  playwright.config.ts was being read as the `fixed` utility and added an unused CSS rule.
+  Tailwind v4 normally scans every file in the project for class names. That turned ordinary words
+  in Markdown, the CI workflow and config comments into unused CSS rules. source(none) switches that
+  off, so only the two @source lines below are scanned. Their paths are relative to this file.
+  If class names ever live outside them, add a new @source line here.
 */
-@source not "../playwright.config.ts";
+@import "tailwindcss" source(none);
+@source "../index.html";
+@source "./";
 
 /*
   Naija Hunt design tokens.
