@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
 /*
+  Tailwind scans the whole project for class names. The word "fixed" in a comment inside
+  playwright.config.ts was being read as the `fixed` utility and added an unused CSS rule.
+*/
+@source not "../playwright.config.ts";
+
+/*
   Naija Hunt design tokens.
   Daylight, warm neutrals, muted greens, charcoal/dark-green panels and small gold accents.
   Tailwind v4 turns each --color-* entry into utilities such as bg-forest-900 or text-gold-500.
