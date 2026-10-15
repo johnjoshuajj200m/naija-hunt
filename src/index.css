@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/*
+  Naija Hunt design tokens.
+  Daylight, warm neutrals, muted greens, charcoal/dark-green panels and small gold accents.
+  Tailwind v4 turns each --color-* entry into utilities such as bg-forest-900 or text-gold-500.
+*/
+@theme {
+  --color-paper: #f4eee2;
+  --color-sand-50: #faf6ee;
+  --color-sand-100: #efe6d3;
+  --color-sand-300: #d9c9a8;
+  --color-clay: #a98f68;
+  --color-leaf: #7b8f5f;
+  --color-forest-700: #2a4535;
+  --color-forest-800: #1d3226;
+  --color-forest-900: #14231b;
+  --color-ink: #1c2420;
+  --color-gold-400: #d1ab55;
+  --color-gold-500: #b88f35;
+
+  --font-display: ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-forest-900);
+    color: var(--color-sand-50);
+    font-family: var(--font-sans);
+  }
+}

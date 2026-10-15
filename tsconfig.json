@@ -1,0 +1,9 @@
+{
+  // Solution-style root config: it checks nothing itself and only points at the
+  // two real projects, so `tsc -b` type-checks both.
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
