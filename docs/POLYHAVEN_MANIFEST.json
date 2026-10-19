@@ -1,0 +1,718 @@
+{
+  "_comment": "Exact Poly Haven download manifest, generated 2026-10-15 from api.polyhaven.com/info and /files. NOTHING in this file has been downloaded. All entries CC0 (https://polyhaven.com/license). Phase 1 = first hero junction. Phase 2 = approved but deferred.",
+  "licence": "CC0-1.0",
+  "licenceSource": "https://polyhaven.com/license",
+  "generated": "2026-10-15",
+  "localRoot": ".asset-cache/polyhaven",
+  "assets": [
+    {
+      "id": "asphalt_02",
+      "type": "texture",
+      "name": "Asphalt 02",
+      "pageUrl": "https://polyhaven.com/a/asphalt_02",
+      "authors": [
+        "Rob Tuytel"
+      ],
+      "resolution": "2k",
+      "phase": 1,
+      "role": "Hero road surface",
+      "realWorldTileMetres": 3.000000238418579,
+      "files": [
+        {
+          "map": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_diff_2k.jpg",
+          "md5": "336af399fd98a39ab986d8b3bf73b4ff",
+          "size": 3075676,
+          "localPath": "textures/asphalt_02/asphalt_02_Diffuse_2k.jpg"
+        },
+        {
+          "map": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_nor_gl_2k.jpg",
+          "md5": "77ebd1cc0b020ccaa1c6b58f103d1f75",
+          "size": 4943950,
+          "localPath": "textures/asphalt_02/asphalt_02_nor_gl_2k.jpg"
+        },
+        {
+          "map": "arm",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/2k/asphalt_02/asphalt_02_arm_2k.jpg",
+          "md5": "152c0fb79ad6f33040b79779fea98664",
+          "size": 1299186,
+          "localPath": "textures/asphalt_02/asphalt_02_arm_2k.jpg"
+        }
+      ],
+      "tier": "desktop"
+    },
+    {
+      "id": "asphalt_02",
+      "type": "texture",
+      "name": "Asphalt 02",
+      "pageUrl": "https://polyhaven.com/a/asphalt_02",
+      "authors": [
+        "Rob Tuytel"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Mobile-tier road surface (same asset as the 2k entry, smaller download)",
+      "realWorldTileMetres": 3.000000238418579,
+      "files": [
+        {
+          "map": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_diff_1k.jpg",
+          "md5": "fa19772d4817754c3efab708c651f5a8",
+          "size": 731707,
+          "localPath": "textures/asphalt_02/asphalt_02_Diffuse_1k.jpg"
+        },
+        {
+          "map": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_nor_gl_1k.jpg",
+          "md5": "338da8de636ea36133170578cac82e8e",
+          "size": 1240122,
+          "localPath": "textures/asphalt_02/asphalt_02_nor_gl_1k.jpg"
+        },
+        {
+          "map": "arm",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/asphalt_02/asphalt_02_arm_1k.jpg",
+          "md5": "33820445f43af5e5ee484674b6939271",
+          "size": 296770,
+          "localPath": "textures/asphalt_02/asphalt_02_arm_1k.jpg"
+        }
+      ],
+      "tier": "mobile"
+    },
+    {
+      "id": "brick_pavement_02",
+      "type": "texture",
+      "name": "Brick Pavement 02",
+      "pageUrl": "https://polyhaven.com/a/brick_pavement_02",
+      "authors": [
+        "Charlotte Baglioni"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Pavements",
+      "realWorldTileMetres": 2,
+      "files": [
+        {
+          "map": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_pavement_02/brick_pavement_02_diff_1k.jpg",
+          "md5": "9fa4072c602f2092eaf5a750f65658b5",
+          "size": 961154,
+          "localPath": "textures/brick_pavement_02/brick_pavement_02_Diffuse_1k.jpg"
+        },
+        {
+          "map": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_pavement_02/brick_pavement_02_nor_gl_1k.jpg",
+          "md5": "60bc2108e8191c55cb940953ae0d3beb",
+          "size": 1050532,
+          "localPath": "textures/brick_pavement_02/brick_pavement_02_nor_gl_1k.jpg"
+        },
+        {
+          "map": "arm",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/brick_pavement_02/brick_pavement_02_arm_1k.jpg",
+          "md5": "b028ce92e2d658dd59f401e0e9d221a1",
+          "size": 694943,
+          "localPath": "textures/brick_pavement_02/brick_pavement_02_arm_1k.jpg"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "painted_plaster_wall",
+      "type": "texture",
+      "name": "Painted Plaster Wall",
+      "pageUrl": "https://polyhaven.com/a/painted_plaster_wall",
+      "authors": [
+        "Amal Kumar"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Painted building walls (placeholder buildings)",
+      "realWorldTileMetres": 2,
+      "files": [
+        {
+          "map": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/painted_plaster_wall/painted_plaster_wall_diff_1k.jpg",
+          "md5": "15ba8c1f63a5ab412b1eabe31728540a",
+          "size": 686726,
+          "localPath": "textures/painted_plaster_wall/painted_plaster_wall_Diffuse_1k.jpg"
+        },
+        {
+          "map": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/painted_plaster_wall/painted_plaster_wall_nor_gl_1k.jpg",
+          "md5": "43fff290583dbdfc9bfa088a2750e840",
+          "size": 900461,
+          "localPath": "textures/painted_plaster_wall/painted_plaster_wall_nor_gl_1k.jpg"
+        },
+        {
+          "map": "arm",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/painted_plaster_wall/painted_plaster_wall_arm_1k.jpg",
+          "md5": "a4c1ff7470669daec9e274d915471246",
+          "size": 511105,
+          "localPath": "textures/painted_plaster_wall/painted_plaster_wall_arm_1k.jpg"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "beige_wall_001",
+      "type": "texture",
+      "name": "Beige Wall 001",
+      "pageUrl": "https://polyhaven.com/a/beige_wall_001",
+      "authors": [
+        "Dimitrios Savva",
+        "Rico Cilliers"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Plain wall base tint",
+      "realWorldTileMetres": 3,
+      "files": [
+        {
+          "map": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/beige_wall_001/beige_wall_001_diff_1k.jpg",
+          "md5": "a99610d7d72ec6fb20ae991ad69b3eb7",
+          "size": 33074,
+          "localPath": "textures/beige_wall_001/beige_wall_001_Diffuse_1k.jpg"
+        },
+        {
+          "map": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/beige_wall_001/beige_wall_001_nor_gl_1k.jpg",
+          "md5": "2f5fc5b63c425b359089468f4d719ef5",
+          "size": 153434,
+          "localPath": "textures/beige_wall_001/beige_wall_001_nor_gl_1k.jpg"
+        },
+        {
+          "map": "arm",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/beige_wall_001/beige_wall_001_arm_1k.jpg",
+          "md5": "665a2f0a2669e423ecdab3719a396739",
+          "size": 87358,
+          "localPath": "textures/beige_wall_001/beige_wall_001_arm_1k.jpg"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "concrete",
+      "type": "texture",
+      "name": "Concrete",
+      "pageUrl": "https://polyhaven.com/a/concrete",
+      "authors": [
+        "Rob Tuytel"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Kerbs, walls, flyover",
+      "realWorldTileMetres": 4,
+      "files": [
+        {
+          "map": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete/concrete_diff_1k.jpg",
+          "md5": "795b1fbb460fb38d29c5859ff2c4b5d4",
+          "size": 543902,
+          "localPath": "textures/concrete/concrete_Diffuse_1k.jpg"
+        },
+        {
+          "map": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete/concrete_nor_gl_1k.jpg",
+          "md5": "17d4bd534e153db3ff469fdfc4484355",
+          "size": 114447,
+          "localPath": "textures/concrete/concrete_nor_gl_1k.jpg"
+        },
+        {
+          "map": "arm",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/concrete/concrete_arm_1k.jpg",
+          "md5": "e53e32dabc5ba580141ed8221654d4c0",
+          "size": 123414,
+          "localPath": "textures/concrete/concrete_arm_1k.jpg"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "corrugated_iron_02",
+      "type": "texture",
+      "name": "Corrugated Iron 02",
+      "pageUrl": "https://polyhaven.com/a/corrugated_iron_02",
+      "authors": [
+        "Jenelle van Heerden",
+        "Sergej Majboroda"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Roofs and market stall sheets",
+      "realWorldTileMetres": 2.700000047683716,
+      "files": [
+        {
+          "map": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/corrugated_iron_02/corrugated_iron_02_diff_1k.jpg",
+          "md5": "0437ba7acc3a60e9a00245580ae7e10b",
+          "size": 568492,
+          "localPath": "textures/corrugated_iron_02/corrugated_iron_02_Diffuse_1k.jpg"
+        },
+        {
+          "map": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/corrugated_iron_02/corrugated_iron_02_nor_gl_1k.jpg",
+          "md5": "e3a9b41f29a5dee9f0835bddb440efbd",
+          "size": 489773,
+          "localPath": "textures/corrugated_iron_02/corrugated_iron_02_nor_gl_1k.jpg"
+        },
+        {
+          "map": "arm",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/corrugated_iron_02/corrugated_iron_02_arm_1k.jpg",
+          "md5": "58d9a11932fae9f85d4cbcde4700abb2",
+          "size": 904443,
+          "localPath": "textures/corrugated_iron_02/corrugated_iron_02_arm_1k.jpg"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "red_laterite_soil_stones",
+      "type": "texture",
+      "name": "Red Laterite Soil Stones",
+      "pageUrl": "https://polyhaven.com/a/red_laterite_soil_stones",
+      "authors": [
+        "Amal Kumar"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Roadside red earth",
+      "realWorldTileMetres": 2,
+      "files": [
+        {
+          "map": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_laterite_soil_stones/red_laterite_soil_stones_diff_1k.jpg",
+          "md5": "f5d483e42da0c704f320b8c159ebca5e",
+          "size": 906764,
+          "localPath": "textures/red_laterite_soil_stones/red_laterite_soil_stones_Diffuse_1k.jpg"
+        },
+        {
+          "map": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_laterite_soil_stones/red_laterite_soil_stones_nor_gl_1k.jpg",
+          "md5": "08737e3b461efa2583c648fbb3472e84",
+          "size": 1494933,
+          "localPath": "textures/red_laterite_soil_stones/red_laterite_soil_stones_nor_gl_1k.jpg"
+        },
+        {
+          "map": "arm",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/red_laterite_soil_stones/red_laterite_soil_stones_arm_1k.jpg",
+          "md5": "8f1a8b5d546c87d57ec2718ea072d8b0",
+          "size": 1056919,
+          "localPath": "textures/red_laterite_soil_stones/red_laterite_soil_stones_arm_1k.jpg"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "corrugated_iron",
+      "type": "texture",
+      "name": "Corrugated Iron",
+      "pageUrl": "https://polyhaven.com/a/corrugated_iron",
+      "authors": [
+        "Jenelle van Heerden",
+        "Dimitrios Savva"
+      ],
+      "resolution": "1k",
+      "phase": 2,
+      "role": "Optional second corrugated pattern; download only when needed",
+      "realWorldTileMetres": 1.1200000047683716,
+      "files": [
+        {
+          "map": "Diffuse",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/corrugated_iron/corrugated_iron_diff_1k.jpg",
+          "md5": "fabb629c5ad6f427e6862bb4043564bd",
+          "size": 719557,
+          "localPath": "textures/corrugated_iron/corrugated_iron_Diffuse_1k.jpg"
+        },
+        {
+          "map": "nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/corrugated_iron/corrugated_iron_nor_gl_1k.jpg",
+          "md5": "02249d61a2b1839552938f35a20d075a",
+          "size": 755185,
+          "localPath": "textures/corrugated_iron/corrugated_iron_nor_gl_1k.jpg"
+        },
+        {
+          "map": "arm",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/corrugated_iron/corrugated_iron_arm_1k.jpg",
+          "md5": "1aa3a922ef522a8b98e6d38a810d8a3e",
+          "size": 513485,
+          "localPath": "textures/corrugated_iron/corrugated_iron_arm_1k.jpg"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "plastic_monobloc_chair_01",
+      "type": "model",
+      "name": "Plastic Monobloc Chair 01",
+      "pageUrl": "https://polyhaven.com/a/plastic_monobloc_chair_01",
+      "authors": [
+        "Kuutti Siitonen"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Market and cafe seating",
+      "triangles": 3356,
+      "dimensionsMetres": [
+        0.64,
+        0.63,
+        0.88
+      ],
+      "variant": null,
+      "files": [
+        {
+          "map": "gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/plastic_monobloc_chair_01/plastic_monobloc_chair_01_1k.gltf",
+          "md5": "b0ac94e52b406e1815af47d9d84eadb4",
+          "size": 2892,
+          "localPath": "models/plastic_monobloc_chair_01/plastic_monobloc_chair_01_1k.gltf"
+        },
+        {
+          "map": "bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/plastic_monobloc_chair_01/plastic_monobloc_chair_01.bin",
+          "md5": "cff97136a9c4bb57c62937cbb7d33a79",
+          "size": 124808,
+          "localPath": "models/plastic_monobloc_chair_01/plastic_monobloc_chair_01.bin"
+        },
+        {
+          "map": "texture",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/plastic_monobloc_chair_01/plastic_monobloc_chair_01_arm_1k.jpg",
+          "md5": "ce9271797fd8893a6c84f639f952d0b9",
+          "size": 634320,
+          "localPath": "models/plastic_monobloc_chair_01/textures/plastic_monobloc_chair_01_arm_1k.jpg"
+        },
+        {
+          "map": "texture",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/plastic_monobloc_chair_01/plastic_monobloc_chair_01_diff_1k.jpg",
+          "md5": "c36dfe0f38d6ca1632ba426c598e6764",
+          "size": 560823,
+          "localPath": "models/plastic_monobloc_chair_01/textures/plastic_monobloc_chair_01_diff_1k.jpg"
+        },
+        {
+          "map": "texture",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/plastic_monobloc_chair_01/plastic_monobloc_chair_01_nor_gl_1k.jpg",
+          "md5": "387f81f09c0754416298398277fb2a6d",
+          "size": 630024,
+          "localPath": "models/plastic_monobloc_chair_01/textures/plastic_monobloc_chair_01_nor_gl_1k.jpg"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "Barrel_01",
+      "type": "model",
+      "name": "Barrel_01",
+      "pageUrl": "https://polyhaven.com/a/Barrel_01",
+      "authors": [
+        "Jorge Camacho"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Street dressing, with oxide_grey texture variant instead of the explosive default",
+      "triangles": 2682,
+      "dimensionsMetres": [
+        0.56,
+        0.56,
+        0.88
+      ],
+      "variant": "oxide_grey",
+      "files": [
+        {
+          "map": "gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/Barrel_01/Barrel_01_1k.gltf",
+          "md5": "45c109401126ea3e5df2fe2c6b6f6d39",
+          "size": 2711,
+          "localPath": "models/Barrel_01/Barrel_01_1k.gltf"
+        },
+        {
+          "map": "bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/Barrel_01/Barrel_01.bin",
+          "md5": "e9f1036a183a1747aea6d40c556d7410",
+          "size": 81756,
+          "localPath": "models/Barrel_01/Barrel_01.bin"
+        },
+        {
+          "map": "oxide_grey_diff",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Barrel_01/Barrel_01_oxide_grey_diff_1k.jpg",
+          "md5": "fd163c7036231470b99ae62271150f67",
+          "size": 150976,
+          "localPath": "models/Barrel_01/textures/Barrel_01_oxide_grey_diff_1k.jpg",
+          "note": "Replaces the explosive texture of the same map when processing. The gltf JSON image URIs must be rewritten."
+        },
+        {
+          "map": "oxide_grey_nor_gl",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Barrel_01/Barrel_01_oxide_grey_nor_gl_1k.jpg",
+          "md5": "64f60f853a9074570b171c223ffb41a8",
+          "size": 221191,
+          "localPath": "models/Barrel_01/textures/Barrel_01_oxide_grey_nor_gl_1k.jpg",
+          "note": "Replaces the explosive texture of the same map when processing. The gltf JSON image URIs must be rewritten."
+        },
+        {
+          "map": "oxide_grey_arm",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Barrel_01/Barrel_01_oxide_grey_arm_1k.jpg",
+          "md5": "3dceb718bba01e4d0917deb4dfc2d5bf",
+          "size": 238780,
+          "localPath": "models/Barrel_01/textures/Barrel_01_oxide_grey_arm_1k.jpg",
+          "note": "Replaces the explosive texture of the same map when processing. The gltf JSON image URIs must be rewritten."
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "wooden_crate_01",
+      "type": "model",
+      "name": "Wooden Crate 01",
+      "pageUrl": "https://polyhaven.com/a/wooden_crate_01",
+      "authors": [
+        "James Ray Cock"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Market stalls",
+      "triangles": 6576,
+      "dimensionsMetres": [
+        0.83,
+        0.41,
+        0.35
+      ],
+      "variant": null,
+      "files": [
+        {
+          "map": "gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/wooden_crate_01/wooden_crate_01_1k.gltf",
+          "md5": "33df4d2ae00186d4b64e878466c9e22e",
+          "size": 5612,
+          "localPath": "models/wooden_crate_01/wooden_crate_01_1k.gltf"
+        },
+        {
+          "map": "texture",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_crate_01/wooden_crate_01_diff_1k.jpg",
+          "md5": "266e0462d06e77c5745f66e89820544f",
+          "size": 711292,
+          "localPath": "models/wooden_crate_01/textures/wooden_crate_01_diff_1k.jpg"
+        },
+        {
+          "map": "texture",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_crate_01/wooden_crate_01_nor_gl_1k.jpg",
+          "md5": "e31626a1fcf6f7062c2ffd9fc982b942",
+          "size": 594076,
+          "localPath": "models/wooden_crate_01/textures/wooden_crate_01_nor_gl_1k.jpg"
+        },
+        {
+          "map": "bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/wooden_crate_01/wooden_crate_01.bin",
+          "md5": "8318f76b0c24b5538ce23051dbcb79a0",
+          "size": 189408,
+          "localPath": "models/wooden_crate_01/wooden_crate_01.bin"
+        },
+        {
+          "map": "texture",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/wooden_crate_01/wooden_crate_01_arm_1k.jpg",
+          "md5": "67c4aeb1154af98f95516b21ef62291c",
+          "size": 776699,
+          "localPath": "models/wooden_crate_01/textures/wooden_crate_01_arm_1k.jpg"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "old_tyre",
+      "type": "model",
+      "name": "Old Tyre",
+      "pageUrl": "https://polyhaven.com/a/old_tyre",
+      "authors": [
+        "MP"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Street dressing",
+      "triangles": 2880,
+      "dimensionsMetres": [
+        0.6,
+        0.16,
+        0.6
+      ],
+      "variant": null,
+      "files": [
+        {
+          "map": "gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/old_tyre/old_tyre_1k.gltf",
+          "md5": "e29d7aee130a850f2224ac0dd103617b",
+          "size": 2734,
+          "localPath": "models/old_tyre/old_tyre_1k.gltf"
+        },
+        {
+          "map": "texture",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/old_tyre/old_tyre_diff_1k.jpg",
+          "md5": "f52b712b8373b1d1a7c46702613f76cb",
+          "size": 650708,
+          "localPath": "models/old_tyre/textures/old_tyre_diff_1k.jpg"
+        },
+        {
+          "map": "texture",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/old_tyre/old_tyre_arm_1k.jpg",
+          "md5": "c9256d0d7cac005512cba4744ab29ab4",
+          "size": 776823,
+          "localPath": "models/old_tyre/textures/old_tyre_arm_1k.jpg"
+        },
+        {
+          "map": "bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/old_tyre/old_tyre.bin",
+          "md5": "e29bd9703ad64da8883d8389b0cfb797",
+          "size": 84160,
+          "localPath": "models/old_tyre/old_tyre.bin"
+        },
+        {
+          "map": "texture",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/old_tyre/old_tyre_nor_gl_1k.jpg",
+          "md5": "e5eb6dd2cf7a8e80813bbc1bc21a6d3d",
+          "size": 722778,
+          "localPath": "models/old_tyre/textures/old_tyre_nor_gl_1k.jpg"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "utility_box_02",
+      "type": "model",
+      "name": "Utility Box 02",
+      "pageUrl": "https://polyhaven.com/a/utility_box_02",
+      "authors": [
+        "James Ray Cock"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Street dressing",
+      "triangles": 6268,
+      "dimensionsMetres": [
+        0.92,
+        0.43,
+        1.12
+      ],
+      "variant": null,
+      "files": [
+        {
+          "map": "gltf",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/utility_box_02/utility_box_02_1k.gltf",
+          "md5": "e73af61886eedd147d66e7e295543142",
+          "size": 2764,
+          "localPath": "models/utility_box_02/utility_box_02_1k.gltf"
+        },
+        {
+          "map": "texture",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/utility_box_02/utility_box_02_diff_1k.jpg",
+          "md5": "119987b82e0faac169e2109ff5961743",
+          "size": 553096,
+          "localPath": "models/utility_box_02/textures/utility_box_02_diff_1k.jpg"
+        },
+        {
+          "map": "texture",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/utility_box_02/utility_box_02_arm_1k.jpg",
+          "md5": "062e9ea1df88d177e332b1595bb27a12",
+          "size": 720694,
+          "localPath": "models/utility_box_02/textures/utility_box_02_arm_1k.jpg"
+        },
+        {
+          "map": "texture",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/utility_box_02/utility_box_02_nor_gl_1k.jpg",
+          "md5": "6704e7af3075eaf58ff7b7fb791f6610",
+          "size": 552902,
+          "localPath": "models/utility_box_02/textures/utility_box_02_nor_gl_1k.jpg"
+        },
+        {
+          "map": "bin",
+          "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/utility_box_02/utility_box_02.bin",
+          "md5": "bff3e7d9375d8c5ea5723ad007e45258",
+          "size": 199784,
+          "localPath": "models/utility_box_02/utility_box_02.bin"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "sunset_jhbcentral",
+      "type": "hdri",
+      "name": "Joburg Central Sunset",
+      "pageUrl": "https://polyhaven.com/a/sunset_jhbcentral",
+      "authors": [
+        "Greg Zaal",
+        "Dimitrios Savva"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Primary image-based lighting and reflections ONLY; never scene.background",
+      "files": [
+        {
+          "map": "hdr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/sunset_jhbcentral_1k.hdr",
+          "md5": "97335a81ba615beb6f6ae0da707ecd75",
+          "size": 1573705,
+          "localPath": "hdris/sunset_jhbcentral_1k.hdr"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "the_sky_is_on_fire",
+      "type": "hdri",
+      "name": "The Sky Is On Fire",
+      "pageUrl": "https://polyhaven.com/a/the_sky_is_on_fire",
+      "authors": [
+        "Greg Zaal",
+        "Rico Cilliers"
+      ],
+      "resolution": "1k",
+      "phase": 1,
+      "role": "Alternate lighting mood ONLY; never scene.background",
+      "files": [
+        {
+          "map": "hdr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/1k/the_sky_is_on_fire_1k.hdr",
+          "md5": "61a167446d21d16fc68328475e889419",
+          "size": 1526564,
+          "localPath": "hdris/the_sky_is_on_fire_1k.hdr"
+        }
+      ],
+      "tier": "all"
+    },
+    {
+      "id": "sunset_jhbcentral",
+      "type": "hdri",
+      "name": "Joburg Central Sunset",
+      "pageUrl": "https://polyhaven.com/a/sunset_jhbcentral",
+      "authors": [
+        "Greg Zaal",
+        "Dimitrios Savva"
+      ],
+      "resolution": "2k",
+      "phase": 2,
+      "role": "Desktop-tier lighting; download only if 1k reflections look too soft",
+      "files": [
+        {
+          "map": "hdr",
+          "url": "https://dl.polyhaven.org/file/ph-assets/HDRIs/hdr/2k/sunset_jhbcentral_2k.hdr",
+          "md5": "0bce4fab7ab46f2db6846ee013cb54fc",
+          "size": 6099369,
+          "localPath": "hdris/sunset_jhbcentral_2k.hdr"
+        }
+      ],
+      "tier": "all"
+    }
+  ],
+  "totals": {
+    "phase1": {
+      "files": 51,
+      "bytes": 35161365,
+      "megabytes": 35.16
+    },
+    "phase2": {
+      "files": 4,
+      "bytes": 8087596,
+      "megabytes": 8.09
+    },
+    "phase1DesktopBytes": 32892766,
+    "phase1MobileBytes": 25842553,
+    "phase1DesktopMegabytes": 32.89,
+    "phase1MobileMegabytes": 25.84
+  }
+}

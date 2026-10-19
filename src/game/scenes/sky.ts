@@ -1,5 +1,6 @@
 import * as THREE from "three";
 
+import { AMBIENT, tagOwner } from "../explore/spaces";
 import { addMesh } from "./sceneHelpers";
 
 /** Warm haze colour. The scene fog uses the same value so distant towers melt into the horizon. */
@@ -38,9 +39,13 @@ export function addSky(parent: THREE.Group): void {
       }
     `,
   });
-  addMesh(parent, new THREE.SphereGeometry(150, 24, 14), material, [0, 0, -40], {
-    cast: false,
-    receive: false,
-    name: "sky",
-  });
+  // The dome is distant and belongs to no street or room, so it is drawn wherever the camera is.
+  tagOwner(
+    addMesh(parent, new THREE.SphereGeometry(150, 24, 14), material, [0, 0, -40], {
+      cast: false,
+      receive: false,
+      name: "sky",
+    }),
+    AMBIENT,
+  );
 }

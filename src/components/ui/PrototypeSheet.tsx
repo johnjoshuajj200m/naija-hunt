@@ -7,11 +7,11 @@ const panels: Record<MenuPanel, { title: string; body: string; future?: readonly
   },
   inventory: {
     title: "Inventory",
-    body: "Inventory is not built yet. Nothing is stored, and nothing can be collected.",
+    body: "Inventory is not built yet. Nothing is stored. The Palm Mile clue is remembered in this browser only.",
   },
   character: {
     title: "Character",
-    body: "The protagonist is not in this build. No character is standing in Palm Mile. A licensed model will be added separately.",
+    body: "The commissioned protagonist is not in this build. The figure walking Palm Mile is a temporary placeholder.",
   },
   profile: {
     title: "Profile",

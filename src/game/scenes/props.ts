@@ -115,7 +115,7 @@ export function buildMarker(parent: THREE.Group, materials: Materials): THREE.Ob
 const TRUNK_HEIGHT = 6.2;
 const TRUNK_BEND = 0.7;
 
-type Palm = { x: number; z: number; scale: number; yaw: number };
+export type Palm = { x: number; z: number; scale: number; yaw: number };
 
 const PALMS: Palm[] = [
   { x: 0, z: -19, scale: 1.15, yaw: 0.4 },
@@ -186,13 +186,17 @@ function createCrownGeometry(): THREE.BufferGeometry {
 }
 
 /** Palm trunks and crowns as two instanced meshes. Returns an updater that sways the crowns. */
-export function buildPalms(parent: THREE.Group, materials: Materials): (elapsed: number) => void {
-  const trunks = new THREE.InstancedMesh(createTrunkGeometry(), materials.trunk, PALMS.length);
-  const crowns = new THREE.InstancedMesh(createCrownGeometry(), materials.leaf, PALMS.length);
+export function buildPalms(
+  parent: THREE.Group,
+  materials: Pick<Materials, "trunk" | "leaf">,
+  palmList: Palm[] = PALMS,
+): (elapsed: number) => void {
+  const trunks = new THREE.InstancedMesh(createTrunkGeometry(), materials.trunk, palmList.length);
+  const crowns = new THREE.InstancedMesh(createCrownGeometry(), materials.leaf, palmList.length);
   const dummy = new THREE.Object3D();
   dummy.rotation.order = "YXZ";
 
-  PALMS.forEach((palm, index) => {
+  palmList.forEach((palm, index) => {
     dummy.position.set(palm.x, 0.16, palm.z);
     dummy.rotation.set(0, palm.yaw, 0);
     dummy.scale.set(palm.scale, TRUNK_HEIGHT * palm.scale, palm.scale);
@@ -209,7 +213,7 @@ export function buildPalms(parent: THREE.Group, materials: Materials): (elapsed:
   parent.add(crowns);
 
   return (elapsed: number) => {
-    PALMS.forEach((palm, index) => {
+    palmList.forEach((palm, index) => {
       const sway = Math.sin(elapsed * 0.7 + index * 1.7) * 0.05;
       dummy.position.set(
         palm.x + TRUNK_BEND * palm.scale * Math.cos(palm.yaw),

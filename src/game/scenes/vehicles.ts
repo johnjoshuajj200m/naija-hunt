@@ -20,7 +20,7 @@ const DANFO_PROFILE: Array<[number, number]> = [
  * Danfo-style minibus: yellow body, black waist stripe, boxy cabin. The nose points along +x.
  * Shared geometry and materials are built once, so extra buses cost draw calls but little memory.
  */
-export function createDanfoFactory(materials: Materials) {
+export function createDanfoFactory(materials: Pick<Materials, "glass" | "metal" | "frame" | "wood" | "charcoal">) {
   const body = standard({ color: "#d6a229", roughness: 0.5, metalness: 0.1 });
   const sideRight = standard({ map: createDanfoSideTexture(false), alphaTest: 0.5, roughness: 0.55, metalness: 0.08 });
   const sideLeft = standard({ map: createDanfoSideTexture(true), alphaTest: 0.5, roughness: 0.55, metalness: 0.08 });

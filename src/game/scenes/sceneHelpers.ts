@@ -45,6 +45,8 @@ export function addMesh(
 export type InstanceSpec = {
   position: Vec3;
   rotation?: Vec3;
+  /** Euler order for `rotation`. Defaults to "XYZ". Use "YXZ" to tilt an object that has been turned about y. */
+  rotationOrder?: THREE.EulerOrder;
   scale?: Vec3 | number;
   color?: THREE.ColorRepresentation;
 };
@@ -65,7 +67,7 @@ export function addInstances(
   specs.forEach((spec, index) => {
     dummy.position.set(spec.position[0], spec.position[1], spec.position[2]);
     const rotation = spec.rotation ?? [0, 0, 0];
-    dummy.rotation.set(rotation[0], rotation[1], rotation[2]);
+    dummy.rotation.set(rotation[0], rotation[1], rotation[2], spec.rotationOrder ?? "XYZ");
     const scale = spec.scale ?? 1;
     if (typeof scale === "number") {
       dummy.scale.setScalar(scale);
@@ -86,6 +88,37 @@ export function addInstances(
   }
   parent.add(mesh);
   return mesh;
+}
+
+/** Frees the GPU memory of every geometry, material and material texture under `root`, each once. */
+export function disposeTree(root: THREE.Object3D): void {
+  const geometries = new Set<THREE.BufferGeometry>();
+  const materials = new Set<THREE.Material>();
+  const textures = new Set<THREE.Texture>();
+  root.traverse((object) => {
+    if (!(object instanceof THREE.Mesh || object instanceof THREE.Line || object instanceof THREE.Points)) {
+      return;
+    }
+    geometries.add(object.geometry);
+    const list = Array.isArray(object.material) ? object.material : [object.material];
+    for (const material of list) {
+      materials.add(material);
+    }
+  });
+  for (const geometry of geometries) {
+    geometry.dispose();
+  }
+  for (const material of materials) {
+    for (const value of Object.values(material)) {
+      if (value instanceof THREE.Texture) {
+        textures.add(value);
+      }
+    }
+    material.dispose();
+  }
+  for (const texture of textures) {
+    texture.dispose();
+  }
 }
 
 /** Building footprint centred on x/z, base at y = 0. */

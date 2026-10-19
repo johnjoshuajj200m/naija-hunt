@@ -1,8 +1,9 @@
 import type { MenuPanel } from "./PrototypeSheet";
 
 type MainMenuProps = {
-  entryAttempted: boolean;
+  clueFound: boolean;
   onEnter: () => void;
+  onNewGame: () => void;
   onOpen: (panel: MenuPanel) => void;
 };
 
@@ -12,7 +13,7 @@ const shortcuts: Array<{ panel: MenuPanel; label: string }> = [
   { panel: "character", label: "Character" },
 ];
 
-export function MainMenu({ entryAttempted, onEnter, onOpen }: MainMenuProps) {
+export function MainMenu({ clueFound, onEnter, onNewGame, onOpen }: MainMenuProps) {
   return (
     <div className="pointer-events-none absolute inset-0 z-10 flex flex-col justify-between p-4 sm:p-5 lg:w-[23rem] lg:p-6">
       <header className="pointer-events-auto flex items-center gap-3 bg-forest-900/80 px-3 py-2">
@@ -35,7 +36,9 @@ export function MainMenu({ entryAttempted, onEnter, onOpen }: MainMenuProps) {
         <p className="text-[0.68rem] font-semibold uppercase tracking-[0.18em] text-gold-400">Featured objective</p>
         <h2 className="mt-1 font-display text-2xl text-sand-50">Palm Mile cache</h2>
         <p className="mt-1 text-sm leading-relaxed text-sand-100">
-          A clue marker is visible in the district. Treasure hunting is not playable yet.
+          {clueFound
+            ? "The Palm Mile marker is already yours on this browser."
+            : "A gold marker stands on Palm Plaza. Walk the streets and take it."}
         </p>
 
         <button
@@ -47,15 +50,17 @@ export function MainMenu({ entryAttempted, onEnter, onOpen }: MainMenuProps) {
           Enter district
         </button>
         <p id="prototype-note" className="mt-2 text-xs leading-relaxed text-sand-300">
-          Visual preview only. Entering the district does not start play.
+          Starts the walk through Palm Mile. The figure is a placeholder.
         </p>
-        <div role="status" className="mt-2 min-h-5">
-          {entryAttempted && (
-            <p className="text-sm leading-relaxed text-sand-50">
-              Walking and treasure hunting are not built yet. Nothing has been launched.
-            </p>
-          )}
-        </div>
+        {clueFound ? (
+          <button
+            type="button"
+            onClick={onNewGame}
+            className="mt-2 min-h-12 w-full border border-sand-300/40 text-sm font-semibold uppercase tracking-[0.14em] text-sand-50"
+          >
+            New game
+          </button>
+        ) : null}
 
         <div className="mt-3 grid grid-cols-3 gap-2">
           {shortcuts.map((shortcut) => (

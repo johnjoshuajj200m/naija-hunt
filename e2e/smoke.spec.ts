@@ -5,7 +5,7 @@ import { expect, test, type Page } from "@playwright/test";
 /**
  * Browser smoke test for the current prototype shell.
  *
- * What this verifies: the production build loads, the menu renders, Enter district stays honest,
+ * What this verifies: the production build loads, the menu renders, Enter district starts the walk,
  * nothing overflows horizontally, and the browser reports no console errors, uncaught exceptions
  * or failed requests.
  *
@@ -63,13 +63,18 @@ test.describe("Naija Hunt shell", () => {
     expect(problems.failedRequests, "failed or error-status requests").toEqual([]);
   });
 
-  test("keeps Enter district honest when pressed", async ({ page }) => {
+  test("starts the walk from Enter district and returns to the menu", async ({ page }) => {
     await page.goto("/");
 
     await page.getByRole("button", { name: /enter district/i }).click();
 
-    await expect(page.getByRole("status")).toContainText(/walking and treasure hunting are not built yet/i);
-    await expect(page.getByRole("status")).toContainText(/nothing has been launched/i);
+    await expect(page.getByRole("status")).toContainText(/find the gold marker on palm plaza/i);
+    await expect(page).toHaveURL(/play=1/);
+
+    await page.getByRole("button", { name: /^menu$/i }).click();
+
+    await expect(page.getByRole("button", { name: /enter district/i })).toBeVisible();
+    await expect(page).not.toHaveURL(/play=1/);
   });
 
   test("does not overflow horizontally", async ({ page }) => {

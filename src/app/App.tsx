@@ -1,7 +1,11 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useLayoutEffect, useState, useSyncExternalStore } from "react";
 
 import { MainMenu } from "../components/ui/MainMenu";
 import { PrototypeSheet, type MenuPanel } from "../components/ui/PrototypeSheet";
+import { ExploreHud } from "../game/explore/ExploreHud";
+import { releaseAllInput } from "../game/explore/playInput";
+import { playPath, readPlayQuery, type PlayQuery } from "../game/explore/playSession";
+import { getQuestSnapshot, loadQuest, resetQuest, subscribeQuest } from "../game/explore/quest";
 
 // Three.js is large, so the 3D scene loads after the menu instead of inside the first bundle.
 const DistrictPreview = lazy(() =>
@@ -20,7 +24,46 @@ function detectWebGL(): boolean {
 export function App() {
   const [webgl] = useState(detectWebGL);
   const [panel, setPanel] = useState<MenuPanel | null>(null);
-  const [entryAttempted, setEntryAttempted] = useState(false);
+  const [mode, setMode] = useState<PlayQuery>(() => {
+    const initial = readPlayQuery(window.location.search);
+    if (initial.fresh) {
+      resetQuest();
+      window.history.replaceState({}, "", playPath(initial.playing, window.location.href));
+      return readPlayQuery(window.location.search);
+    }
+    loadQuest();
+    return initial;
+  });
+  const [run, setRun] = useState(0);
+  const clueFound = useSyncExternalStore(subscribeQuest, getQuestSnapshot, getQuestSnapshot);
+
+  useLayoutEffect(() => {
+    const onPop = () => setMode(readPlayQuery(window.location.search));
+    window.addEventListener("popstate", onPop);
+    return () => window.removeEventListener("popstate", onPop);
+  }, []);
+
+  const enterDistrict = () => {
+    releaseAllInput();
+    window.history.pushState({}, "", playPath(true, window.location.href));
+    setMode(readPlayQuery(window.location.search));
+    setPanel(null);
+  };
+
+  const returnToMenu = () => {
+    releaseAllInput();
+    window.history.pushState({}, "", playPath(false, window.location.href));
+    setMode(readPlayQuery(window.location.search));
+  };
+
+  const newGame = () => {
+    releaseAllInput();
+    resetQuest();
+    setRun((value) => value + 1);
+    window.history.pushState({}, "", playPath(true, window.location.href));
+    setMode(readPlayQuery(window.location.search));
+    setPanel(null);
+  };
 
   return (
     <div className="relative h-dvh overflow-hidden bg-forest-900 text-sand-50">
@@ -37,7 +80,7 @@ export function App() {
             }
           >
             <div className="h-full w-full" aria-hidden="true">
-              <DistrictPreview />
+              <DistrictPreview playing={mode.playing} run={run} />
             </div>
           </Suspense>
         ) : (
@@ -47,7 +90,8 @@ export function App() {
         )}
       </section>
 
-      <MainMenu entryAttempted={entryAttempted} onEnter={() => setEntryAttempted(true)} onOpen={setPanel} />
+      {!mode.playing && <MainMenu clueFound={clueFound} onEnter={enterDistrict} onNewGame={newGame} onOpen={setPanel} />}
+      {mode.playing && !mode.overview && <ExploreHud onMenu={returnToMenu} onNewGame={newGame} />}
       {panel && <PrototypeSheet panel={panel} onClose={() => setPanel(null)} />}
     </div>
   );

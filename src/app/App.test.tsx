@@ -1,8 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 
+import { CLUE_STORAGE_KEY, resetQuest } from "../game/explore/quest";
 import { App } from "./App";
+
+afterEach(() => {
+  resetQuest();
+  localStorage.clear();
+  window.history.replaceState({}, "", "/");
+});
 
 describe("App main menu", () => {
   it("shows the Naija Hunt identity, Palm Mile, and a preview status", () => {
@@ -23,31 +30,49 @@ describe("App main menu", () => {
     expect(document.querySelector("canvas")).toBeNull();
   });
 
-  it("presents the featured objective as not playable", () => {
+  it("presents the Palm Mile cache as the walk's objective", () => {
     render(<App />);
 
     expect(screen.getByRole("heading", { name: /palm mile cache/i })).toBeInTheDocument();
-    expect(screen.getByText(/treasure hunting is not playable yet/i)).toBeInTheDocument();
+    expect(screen.getByText(/gold marker stands on palm plaza/i)).toBeInTheDocument();
   });
 
-  it("offers Enter district as a prototype control", () => {
+  it("offers Enter district as the start of the walk", () => {
     render(<App />);
 
     const button = screen.getByRole("button", { name: /enter district/i });
     expect(button).toBeEnabled();
-    expect(button).toHaveAccessibleDescription(/does not start play/i);
+    expect(button).toHaveAccessibleDescription(/starts the walk through palm mile/i);
   });
 
-  it("does not claim the game launched when Enter district is pressed", async () => {
+  it("starts the walk from Enter district and can return to the menu", async () => {
     const user = userEvent.setup();
     render(<App />);
 
-    expect(screen.queryByText(/nothing has been launched/i)).not.toBeInTheDocument();
-
     await user.click(screen.getByRole("button", { name: /enter district/i }));
 
-    expect(screen.getByRole("status")).toHaveTextContent(/walking and treasure hunting are not built yet/i);
-    expect(screen.getByRole("status")).toHaveTextContent(/nothing has been launched/i);
+    expect(screen.getByRole("status")).toHaveTextContent(/find the gold marker on palm plaza/i);
+    expect(screen.queryByRole("button", { name: /enter district/i })).not.toBeInTheDocument();
+    expect(window.location.search).toContain("play=1");
+
+    await user.click(screen.getByRole("button", { name: /^menu$/i }));
+
+    expect(screen.getByRole("button", { name: /enter district/i })).toBeInTheDocument();
+    expect(window.location.search).not.toContain("play=1");
+  });
+
+  it("opens a direct play link and keeps a collected clue across a new render", async () => {
+    localStorage.setItem(CLUE_STORAGE_KEY, "1");
+    window.history.replaceState({}, "", "/?play=1");
+    const user = userEvent.setup();
+    render(<App />);
+
+    expect(screen.getByRole("status")).toHaveTextContent(/palm mile marker is yours/i);
+
+    await user.click(screen.getByRole("button", { name: /new game/i }));
+
+    expect(screen.getByRole("status")).toHaveTextContent(/find the gold marker on palm plaza/i);
+    expect(localStorage.getItem(CLUE_STORAGE_KEY)).toBeNull();
   });
 
   it("opens honest prototype panels for map, inventory, and character", async () => {
@@ -69,7 +94,7 @@ describe("App main menu", () => {
 
     await user.click(screen.getByRole("button", { name: /^character$/i }));
     expect(screen.getByRole("dialog", { name: /character/i })).toHaveTextContent(/protagonist is not in this build/i);
-    expect(screen.getByRole("dialog", { name: /character/i })).toHaveTextContent(/no character is standing/i);
+    expect(screen.getByRole("dialog", { name: /character/i })).toHaveTextContent(/temporary placeholder/i);
   });
 
   it("lists future systems on the profile panel and does not mention real-money features", async () => {
