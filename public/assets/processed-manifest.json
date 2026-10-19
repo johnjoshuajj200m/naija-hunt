@@ -1,0 +1,377 @@
+{
+  "licence": "CC0-1.0",
+  "generatedBy": "scripts/process-assets.mjs",
+  "outputs": [
+    {
+      "path": "assets/hdri/sunset_jhbcentral_1k.hdr",
+      "bytes": 1573705,
+      "source": "sunset_jhbcentral",
+      "tier": "all",
+      "kind": "hdri"
+    },
+    {
+      "path": "assets/props/desktop/Barrel_01.glb",
+      "bytes": 223616,
+      "source": "Barrel_01",
+      "tier": "desktop",
+      "kind": "prop"
+    },
+    {
+      "path": "assets/props/desktop/old_tyre.glb",
+      "bytes": 224352,
+      "source": "old_tyre",
+      "tier": "desktop",
+      "kind": "prop"
+    },
+    {
+      "path": "assets/props/desktop/plastic_monobloc_chair_01.glb",
+      "bytes": 271420,
+      "source": "plastic_monobloc_chair_01",
+      "tier": "desktop",
+      "kind": "prop"
+    },
+    {
+      "path": "assets/props/desktop/utility_box_02.glb",
+      "bytes": 305792,
+      "source": "utility_box_02",
+      "tier": "desktop",
+      "kind": "prop"
+    },
+    {
+      "path": "assets/props/desktop/wooden_crate_01.glb",
+      "bytes": 311452,
+      "source": "wooden_crate_01",
+      "tier": "desktop",
+      "kind": "prop"
+    },
+    {
+      "path": "assets/props/mobile/Barrel_01.glb",
+      "bytes": 124432,
+      "source": "Barrel_01",
+      "tier": "mobile",
+      "kind": "prop"
+    },
+    {
+      "path": "assets/props/mobile/old_tyre.glb",
+      "bytes": 121688,
+      "source": "old_tyre",
+      "tier": "mobile",
+      "kind": "prop"
+    },
+    {
+      "path": "assets/props/mobile/plastic_monobloc_chair_01.glb",
+      "bytes": 179420,
+      "source": "plastic_monobloc_chair_01",
+      "tier": "mobile",
+      "kind": "prop"
+    },
+    {
+      "path": "assets/props/mobile/utility_box_02.glb",
+      "bytes": 237392,
+      "source": "utility_box_02",
+      "tier": "mobile",
+      "kind": "prop"
+    },
+    {
+      "path": "assets/props/mobile/wooden_crate_01.glb",
+      "bytes": 229132,
+      "source": "wooden_crate_01",
+      "tier": "mobile",
+      "kind": "prop"
+    },
+    {
+      "path": "assets/textures/desktop/asphalt_02/arm.webp",
+      "bytes": 396836,
+      "source": "asphalt_02:arm",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/asphalt_02/diff.webp",
+      "bytes": 381724,
+      "source": "asphalt_02:Diffuse",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/asphalt_02/nor.webp",
+      "bytes": 568930,
+      "source": "asphalt_02:nor_gl",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/beige_wall_001/arm.webp",
+      "bytes": 4966,
+      "source": "beige_wall_001:arm",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/beige_wall_001/diff.webp",
+      "bytes": 576,
+      "source": "beige_wall_001:Diffuse",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/beige_wall_001/nor.webp",
+      "bytes": 22286,
+      "source": "beige_wall_001:nor_gl",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/brick_pavement_02/arm.webp",
+      "bytes": 84774,
+      "source": "brick_pavement_02:arm",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/brick_pavement_02/diff.webp",
+      "bytes": 308328,
+      "source": "brick_pavement_02:Diffuse",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/brick_pavement_02/nor.webp",
+      "bytes": 446426,
+      "source": "brick_pavement_02:nor_gl",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/concrete/arm.webp",
+      "bytes": 61208,
+      "source": "concrete:arm",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/concrete/diff.webp",
+      "bytes": 227206,
+      "source": "concrete:Diffuse",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/concrete/nor.webp",
+      "bytes": 110954,
+      "source": "concrete:nor_gl",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/corrugated_iron_02/arm.webp",
+      "bytes": 27454,
+      "source": "corrugated_iron_02:arm",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/corrugated_iron_02/diff.webp",
+      "bytes": 7856,
+      "source": "corrugated_iron_02:Diffuse",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/corrugated_iron_02/nor.webp",
+      "bytes": 10818,
+      "source": "corrugated_iron_02:nor_gl",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/painted_plaster_wall/arm.webp",
+      "bytes": 21354,
+      "source": "painted_plaster_wall:arm",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/painted_plaster_wall/diff.webp",
+      "bytes": 141288,
+      "source": "painted_plaster_wall:Diffuse",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/painted_plaster_wall/nor.webp",
+      "bytes": 384046,
+      "source": "painted_plaster_wall:nor_gl",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/red_laterite_soil_stones/arm.webp",
+      "bytes": 70216,
+      "source": "red_laterite_soil_stones:arm",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/red_laterite_soil_stones/diff.webp",
+      "bytes": 45848,
+      "source": "red_laterite_soil_stones:Diffuse",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/desktop/red_laterite_soil_stones/nor.webp",
+      "bytes": 162890,
+      "source": "red_laterite_soil_stones:nor_gl",
+      "tier": "desktop",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/asphalt_02/arm.webp",
+      "bytes": 176896,
+      "source": "asphalt_02:arm",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/asphalt_02/diff.webp",
+      "bytes": 207410,
+      "source": "asphalt_02:Diffuse",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/asphalt_02/nor.webp",
+      "bytes": 302542,
+      "source": "asphalt_02:nor_gl",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/beige_wall_001/arm.webp",
+      "bytes": 854,
+      "source": "beige_wall_001:arm",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/beige_wall_001/diff.webp",
+      "bytes": 192,
+      "source": "beige_wall_001:Diffuse",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/beige_wall_001/nor.webp",
+      "bytes": 1890,
+      "source": "beige_wall_001:nor_gl",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/brick_pavement_02/arm.webp",
+      "bytes": 22420,
+      "source": "brick_pavement_02:arm",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/brick_pavement_02/diff.webp",
+      "bytes": 69732,
+      "source": "brick_pavement_02:Diffuse",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/brick_pavement_02/nor.webp",
+      "bytes": 106308,
+      "source": "brick_pavement_02:nor_gl",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/concrete/arm.webp",
+      "bytes": 21786,
+      "source": "concrete:arm",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/concrete/diff.webp",
+      "bytes": 46136,
+      "source": "concrete:Diffuse",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/concrete/nor.webp",
+      "bytes": 22180,
+      "source": "concrete:nor_gl",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/corrugated_iron_02/arm.webp",
+      "bytes": 2594,
+      "source": "corrugated_iron_02:arm",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/corrugated_iron_02/diff.webp",
+      "bytes": 1964,
+      "source": "corrugated_iron_02:Diffuse",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/corrugated_iron_02/nor.webp",
+      "bytes": 3322,
+      "source": "corrugated_iron_02:nor_gl",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/painted_plaster_wall/arm.webp",
+      "bytes": 3464,
+      "source": "painted_plaster_wall:arm",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/painted_plaster_wall/diff.webp",
+      "bytes": 11076,
+      "source": "painted_plaster_wall:Diffuse",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/painted_plaster_wall/nor.webp",
+      "bytes": 58622,
+      "source": "painted_plaster_wall:nor_gl",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/red_laterite_soil_stones/arm.webp",
+      "bytes": 11896,
+      "source": "red_laterite_soil_stones:arm",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/red_laterite_soil_stones/diff.webp",
+      "bytes": 7916,
+      "source": "red_laterite_soil_stones:Diffuse",
+      "tier": "mobile",
+      "kind": "texture"
+    },
+    {
+      "path": "assets/textures/mobile/red_laterite_soil_stones/nor.webp",
+      "bytes": 30408,
+      "source": "red_laterite_soil_stones:nor_gl",
+      "tier": "mobile",
+      "kind": "texture"
+    }
+  ]
+}
